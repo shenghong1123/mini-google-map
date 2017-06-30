@@ -1,0 +1,17 @@
+{
+  "name": "map",
+  "version": "1.0.0",
+  "description": "google map",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shenghong Wang",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "jquery": "^3.2.1",
+    "path": "^0.12.7",
+    "require": "^2.4.20"
+  }
+}
