@@ -4,6 +4,7 @@
   "description": "google map",
   "main": "index.js",
   "scripts": {
+    "server": "./build_css.sh && node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Shenghong Wang",
@@ -11,6 +12,7 @@
   "dependencies": {
     "express": "^4.15.3",
     "jquery": "^3.2.1",
+    "less": "^2.7.2",
     "path": "^0.12.7",
     "require": "^2.4.20"
   }
