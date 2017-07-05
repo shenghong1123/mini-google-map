@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <div id="map"></div>
-    <link rel=stylesheet type="text/css" href="/css/map.css">
-    <script type="text/javascript" src="/js/jquery-3.2.1.js"></script>
-    <script type="text/javascript" src="/js/underscore.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxcoRSUSKxeAQ6qV_2D5CovpUeC5UyToA&libraries=places"></script>
-    <script type = "text/javascript" src="/js/map.js"></script>
-  </body>
+
+<body>
+  <link rel=stylesheet type="text/css" href="/css/map.css">
+  <script type="text/javascript" src="/js/jquery-3.2.1.js"></script>
+  <script type="text/javascript" src="/js/underscore.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxcoRSUSKxeAQ6qV_2D5CovpUeC5UyToA&libraries=places"></script>
+  <script type="text/javascript" src="/js/map.js"></script>
+
+  <div id="map"></div>
+  <div id="place-info-wrapper">
+    <div id="hero-header-wrapper">
+      <div id="place-basic-info-wrapper">
+        <div id="place-basic-info">
+          <div class="place-name info text"></div>
+          <div class="place-review-score info-text"></div>
+          <div class="place-type info text"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
