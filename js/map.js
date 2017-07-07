@@ -97,6 +97,9 @@ function getNearByPlaces(map, params) {
       $('.place-type').text(place['types'][0]);
       $('#place-info-wrapper').addClass('visible');
       $('#place-info-wrapper').addClass('is-active');
+      setTimeout(function() {
+        $('#place-info-wrapper').addClass('visible');
+      }, 100);
     });
   }
 
