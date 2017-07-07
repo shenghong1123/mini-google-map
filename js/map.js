@@ -1,4 +1,3 @@
-var DEFAULT_ZOOM = 15;
 var GOOGLE_API_KEY = 'AIzaSyBxcoRSUSKxeAQ6qV_2D5CovpUeC5UyToA';
 
 $(function () {
@@ -6,6 +5,9 @@ $(function () {
   var DEFAULT_RADIUS = 1500;
   var DEFAULT_LAT = 37.773972;
   var DEFAULT_LNG = -122.43129;
+  var DEFAULT_ZOOM = 15;
+  var current_infowindow;
+  var markers_shown;
 
   function initMap() {
     var map = new google.maps.Map($('#map')[0], {
@@ -40,6 +42,12 @@ $(function () {
   }
 
 function getNearByPlaces(map, params) {
+  if (markers_shown) {
+    _.each(markers_shown, function(marker) {
+      marker.setMap(null);
+    });
+  }
+  markers_shown = [];
     service = new google.maps.places.PlacesService(map);
     service.nearbySearch(params, function (results, status) {
       if (status === google.maps.places.PlacesServiceStatus.OK) {
@@ -68,6 +76,8 @@ function getNearByPlaces(map, params) {
             current_infowindow = infowindow;
             showDetailedInfo(place);
           });
+
+          markers_shown.push(marker);
         });
       }
     });
