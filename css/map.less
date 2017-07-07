@@ -14,13 +14,14 @@ html {
       background-color: #4285F4;
       position: absolute;
       top: 0;
-      left: -408px;
+      transition: transform, 0.3s ease-in-out;
+      transform: translateX(-408px);
       display: none;
       &.is-active {
         display: block;
       }
       &.visible {
-        left: 0;
+        transform: translateX(0);
       }
       #hero-header-wrapper {
         width: 100%;
